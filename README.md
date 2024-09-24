@@ -41,7 +41,7 @@ T(n) = 3<sup>i</sup>T(n/3<sup>i</sup>) + 3<sup>i</sup>(n<sup>5</sup>)
 
 i = log<sub>3</sub>(n)
 
-3 <sup>log<sub>3</sub>n</sup> * T(1) + 3 <sup>log <sub>3</sub> n</sup> * n <sup>5</sup>
+3 <sup>log<sub>3</sub>n</sup>(T(1)) + 3<sup>log <sub>3</sub> n</sup>(n<sup>5</sup>)
 
 3 <sup>log <sub>3</sub> n</sup> = n
 
