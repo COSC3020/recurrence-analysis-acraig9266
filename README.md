@@ -37,7 +37,7 @@ T(n) = 1, for n <= 1;
 
 T(n) = 3<sup>i</sup>(T(n/3) + (n<sup>2</sup>)(n)(n<sup>2</sup>)), for n >= 1;
 
-T(n) = 3<sup>i</sup>T(n/3 <sup>i</sup> ) + 3<sup>i</sup> * n<sup>5</sup>
+T(n) = 3<sup>i</sup>T(n/3 <sup>i</sup> ) + 3<sup>i</sup>(n<sup>5</sup>)
 
 i = log<sub>3</sub>(n)
 
