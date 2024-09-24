@@ -33,5 +33,5 @@ might help with the notation for mathematical expressions.
 
 ```math
 
-T(n) = 3<sub>subscript</sub>i (T(n/3) + n^2 * n * n^2), for n >= 1;
+T(n) = 3 <sub>subscript</sub> i (T(n/3) + n^2 * n * n^2), for n >= 1;
 ```
