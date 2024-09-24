@@ -30,3 +30,21 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+```math
+
+T(n) = 1, for n <= 1;
+T(n) = 3<sup>i</sup> (T(n/3) + n<sup>2</sup> * n * n<sup>2</sup>), for n >= 1;
+
+T(n) = 3<sup>i</sup> * T(n/3<sup>i</sup>) + 3<sup>i</sup> * n<sup>5</sup>
+
+i = log<sub>3</sub>(n)
+
+3^log<sub>3</sub>(n) * T(1) + 3^log<sub>3</sub>(n) * n^5
+
+3^log<sub>3</sub>(n) = n
+
+n * T(1) + n * n<sup>5</sup>
+
+big theta (nT(1) + n<sup>6</sup>)
+```
