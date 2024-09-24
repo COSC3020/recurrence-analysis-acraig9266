@@ -47,7 +47,6 @@ i = log<sub>3</sub>(n)
 
 n(T(1)) + n(n<sup>5</sup>)
 
-big theta (n(T(1)) + n<sup>6</sup>)
+T(n) = n(T(1)) + n<sup>6</sup>
 
-T(n) = 9T(n/9) + 3^i * n <sup>5</sup>
-
+T(n) ∈ big $O$ (n<sup>6</sup>)
