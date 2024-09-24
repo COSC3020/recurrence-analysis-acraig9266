@@ -1,6 +1,6 @@
 # Recurrence Analysis -- Mystery Function
-I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice. No sources were used.
-Asked Aaron Krapes to check if it seemed right, only note was that I dropped the n(T(1) before the end when it should only be dropped in the Big O notation.
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+Asked Aaron Krapes to double check for me, noted that n(T(1)) was dropped before the end when it should only be dropped in the Big O notation.
 
 Analyze the running time of the following recursive procedure as a function of
 $n$ and find a tight big $O$ bound on the runtime for the function. You may
