@@ -9,20 +9,20 @@ relation.
 
 ```javascript
 function mystery(n) {
-    if(n <= 1)
+    if(n <= 1)            O(1)
         return;
     else {
-        mystery(n / 3);
+        mystery(n / 3);   O(?)
         var count = 0;
-        mystery(n / 3);
-        for(var i = 0; i < n*n; i++) {
-            for(var j = 0; j < n; j++) {
-                for(var k = 0; k < n*n; k++) {
+        mystery(n / 3);   O(?)
+        for(var i = 0; i < n*n; i++) {            O(n^2)
+            for(var j = 0; j < n; j++) {          O(n)
+                for(var k = 0; k < n*n; k++) {    O(n^2)
                     count = count + 1;
                 }
             }
         }
-        mystery(n / 3);
+        mystery(n / 3);   O(?)
     }
 }
 ```
@@ -49,4 +49,4 @@ n(T(1)) + n(n<sup>5</sup>)
 
 T(n) = n(T(1)) + n<sup>6</sup>
 
-T(n) ∈ big $O$ (n<sup>6</sup>)
+T(n) ∈ $O$(n<sup>6</sup>)
