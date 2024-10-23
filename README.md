@@ -14,17 +14,17 @@ function mystery(n) {
     if(n <= 1)            O(1)
         return;
     else {
-        mystery(n / 3);   O(?)
-        var count = 0;
-        mystery(n / 3);   O(?)
-        for(var i = 0; i < n*n; i++) {            O(n^2)
-            for(var j = 0; j < n; j++) {          O(n)
-                for(var k = 0; k < n*n; k++) {    O(n^2)
-                    count = count + 1;
+        mystery(n / 3);                           n/3
+        var count = 0;                            O(1)
+        mystery(n / 3);                           n/3
+        for(var i = 0; i < n*n; i++) {            n^2
+            for(var j = 0; j < n; j++) {          n
+                for(var k = 0; k < n*n; k++) {    n^2
+                    count = count + 1;            O(1)
                 }
             }
         }
-        mystery(n / 3);   O(?)
+        mystery(n / 3);                           n/3
     }
 }
 ```
@@ -35,20 +35,36 @@ might help with the notation for mathematical expressions.
 
 
 
-T(n) = 1, for n <= 1;
+$$
+T(n) = 
+\begin{cases} 
+1 & \text{for } n \leq 1 \\ 
+3\left(T\left(\frac{n}{3}\right) + n^{5}\right) & \text{for } n > 1 
+\end{cases}
+$$
 
-T(n) = 3<sup>i</sup>(T(n/3) + (n<sup>2</sup>)(n)(n<sup>2</sup>)), for n >= 1;
+$$ T(n) = 3\left(T\left(\frac{n}{3}\right) + n^{5}\right) $$
 
-T(n) = 3<sup>i</sup>T(n/3<sup>i</sup>) + 3<sup>i</sup>(n<sup>5</sup>)
+$$ T(n) = 3\left(3\left(T\left(\frac{n}{9}\right) + n^{5}\right)\right) $$
 
-i = log<sub>3</sub>(n)
+$$ T(n) = 9\left(T\left(\frac{n}{9}\right) + n^{5}\right) $$
 
-3 <sup>log<sub>3</sub>n</sup>(T(1)) + 3<sup>log <sub>3</sub> n</sup>(n<sup>5</sup>)
+$$ T(n) = 3\left(9\left(T\left(\frac{n}{9}\right) + n^{5}\right)\right) $$
 
-3 <sup>log <sub>3</sub> n</sup> = n
+$$ T(n) = 27\left(T\left(\frac{n}{27}\right) + n^{5}\right) $$
 
-n(T(1)) + n(n<sup>5</sup>)
+$$ T(n) = 27T\left(\frac{n}{27}\right) + 27n^{5} $$
 
-T(n) = n(T(1)) + n<sup>6</sup>
+$$ T(n) = 3^{i}T\left(\frac{n}{3^{i}}\right) + 3^{i}n^{5} \quad \text{for } i = \lg(n) $$
 
-T(n) ∈ $O$(n<sup>6</sup>)
+$$ 3^{\lg(n)} = n $$
+
+$$ = nT\left(\frac{n}{n}\right) + n(n^{5}) $$
+
+$$ = nT(1) + n(n^{5}) $$
+
+$$ = n + n^{6} $$
+
+$$ T(n) \in \Theta(n^{6}) $$
+
+
